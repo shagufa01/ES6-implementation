@@ -114,15 +114,68 @@ const FriendName = 'jenny';
 const greeting = "Happy Birthday " + FriendName + ", God Bless.";
 console.log(greeting);
 
-const subject = "mathematics. ";
-const messege = "you got highest in "
-const congratulate = "Congratulations," + messege + subject + "KEEP IT UP!"
+const subject = 'mathematics. ';
+const message = "you got highest in "
+const congratulate = "Congratulations," + message + subject + "KEEP IT UP!"
 console.log(congratulate);
 
+const friend = 'shifa';
+const greet = `Happy birthday ${friend}`;
+console.log(greet);
 
 
+//Array helper methods in ES6
+ 
+// forEach
+// forEach accept a function iterator that loop through each item in an array
+
+const array = [1,2,3,4]
+array.forEach(item => console.log(item))
+
+const items = (item) => { console.log(item) }
+array.forEach(items)
+
+const mains = ["food" , "drink" , "medicines" , "gym"] 
+mains.forEach(item => console.log(item));
 
 
+const stuff = (stuff) => {console.log(stuff) }
+mains.forEach(stuff)
+
+// Map
+// Map will loop through each item of array, same like forEach but Map returns the value of the array.
+
+const arr = [{name:"James",age:18}, {name:"Alice",age:20}]
+const person_names = arr.map(person => person.name);
+const person_age = arr.map(person => person.age);
+
+console.log(person_age , person_names);
+
+const detail = [{name:"jonas" , year:2053}, {name:"scarlett" , year:1988}, {name:"drake" , year:2019}]
+const candidate_name = detail.map(candidate => candidate.name);
+const candidate_year = detail.map(candidate => candidate.year);
+
+console.log(candidate_name);
+
+//using for loop
+const arrayOfObjects = [{name:"gigi",age:5}, {name:"gaga",age:6}]
+let temp = []
+for(let i = 0; i < arrayOfObjects.length; i++){
+    temp.push(arrayOfObjects[i].age)
+}
+console.log(temp)
 
 
+// find
+// find will return the record if a particular element is found in the array.
+
+
+let x = [
+    {name:"jay",age:15},
+    {name:"ray",age:30}
+ ]
+ x.find(obj => obj.name === "jay")
+
+let sub = [{topic:"english", code:1 , marks:100} , {topic:"maths", code:2 , marks:100}]
+sub.find(obj => obj.topic === "maths")
 
